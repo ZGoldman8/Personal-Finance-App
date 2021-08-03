@@ -9,4 +9,9 @@ public class AssetsInventoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frag1_assets_inventory_layout);
     }
+
+    //public void addAssetsInventoryItem() {
+       //LinearLayout ll = (LinearLayout) findViewById(R.id.)
+
+    //}
 }

@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalFinanceApp">
-        <activity android:name=".NetWorthActivity" />
-        <activity android:name=".NetWorthProgressionActivity" />
-        <activity android:name=".AssetsInventoryActivity" />
+        <activity android:name=".NetWorthCalculatorActivity" android:label="Net Worth Calculator" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".NetWorthProgressionActivity" android:label="Net Worth Progression" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AssetsInventoryActivity" android:label="Assets Inventory" android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

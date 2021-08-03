@@ -78,23 +78,6 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textViewCarValue"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:fontFamily="@font/biryani_extralight"
-                android:text="Car Value"
-                android:textAlignment="center"
-                android:textSize="25dp" />
-
-            <EditText
-                android:id="@+id/editTextCarValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20px"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
                 android:id="@+id/textViewSavings"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
@@ -112,16 +95,33 @@
                 android:inputType="textPersonName" />
 
             <TextView
-                android:id="@+id/textViewOtherAssets"
+                android:id="@+id/textViewCarValue"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:fontFamily="@font/biryani_extralight"
-                android:text="Other"
+                android:text="Car Value"
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
             <EditText
-                android:id="@+id/editTextOtherAssets"
+                android:id="@+id/editTextCarValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewAssetsInventory"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/biryani_extralight"
+                android:text="Assets Inventory"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextAssetsInventory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20px"
@@ -188,6 +188,23 @@
 
             <EditText
                 android:id="@+id/editTextLoans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20px"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewMortgage"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="@font/biryani_extralight"
+                android:text="Mortgage"
+                android:textAlignment="center"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/editTextMortgage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20px"

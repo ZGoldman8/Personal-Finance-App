@@ -13,6 +13,59 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="parent"
         tools:layout_editor_absoluteX="-35dp">
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAssetsInventoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/biryani_extralight"
+                android:text="Assets Inventory"
+                android:textAlignment="center"
+                android:textSize="35dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                        android:id="@+id/editTextItem1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/biryani_extralight"
+                        android:hint="Enter item name here"
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextAssetsInventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:hint="Item Price"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addAssetsInventoryItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="25px"
+                    android:layout_marginBottom="25px"
+                    android:clickable="true"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
