@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/honeydew">
 
-
     <Button
         android:id="@+id/netWorthButton"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginTop="152dp"
         android:layout_marginBottom="7dp"
-        android:text="Net Worth Calculator"
+        android:text="@string/net_worth_calculator"
         app:layout_constraintBottom_toTopOf="@+id/netWorthProgressionButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        android:text="View Net Worth Progression"
+        android:text="@string/net_worth_progression"
         app:layout_constraintBottom_toTopOf="@+id/assetsInventoryButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +34,7 @@
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginBottom="323dp"
-        android:text="Assets Inventory"
+        android:text="@string/assets_inventory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

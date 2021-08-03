@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:fontFamily="@font/biryani_extralight"
-                android:text="Roth IRA"
+                android:text="@string/net_worth_roth_ira"
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:fontFamily="@font/biryani_extralight"
-                android:text="HSA"
+                android:text="@string/net_worth_hsa"
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
@@ -82,29 +82,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:fontFamily="@font/biryani_extralight"
-                android:text="Savings Account"
+                android:text="@string/net_worth_savings"
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
             <EditText
                 android:id="@+id/editTextSavings"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20px"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textViewCarValue"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:fontFamily="@font/biryani_extralight"
-                android:text="Car Value"
-                android:textAlignment="center"
-                android:textSize="25dp" />
-
-            <EditText
-                android:id="@+id/editTextCarValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20px"

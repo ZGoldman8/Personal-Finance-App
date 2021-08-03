@@ -1,6 +1,21 @@
 <resources>
+    <!--Headers-->
     <string name="app_name">Personal Finance App</string>
     <string name="tab_text_1">Net Worth</string>
     <string name="tab_text_2">Investments</string>
     <string name="tab_text_3">Budget</string>
+
+    <!--Titles-->
+    <string name="net_worth_calculator">Net Worth Calculator</string>
+    <string name="net_worth_progression">Net Worth Progression</string>
+    <string name="assets_inventory">Assets Inventory</string>
+
+    <!--Other Text-->
+    <string name="asset_name">Asset Name</string>
+    <string name="asset_price">Asset Price</string>
+    <string name="net_worth_roth_ira">Roth IRA</string>
+    <string name="net_worth_hsa">HSA</string>
+    <string name="net_worth_savings">Savings</string>
+    <string name="net_worth_401k">401k</string>
+    <string name="save">Save</string>
 </resources>
