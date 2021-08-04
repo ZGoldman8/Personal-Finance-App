@@ -26,7 +26,7 @@ public class AssetsInventoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 addAssetsInventoryItem();
-                showOrHideRemoveButton();
+                showOrHideButtons();
             }
         });
 
@@ -34,18 +34,15 @@ public class AssetsInventoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 removeAssetsInventoryItem();
-                showOrHideRemoveButton();
+                showOrHideButtons();
             }
         });
     };
 
-    public void showOrHideRemoveButton() {
-        if (numberOfFieldsInList > 1) {
-            removeAssetsInventoryItem.setVisibility(View.VISIBLE);
-        } else {
-            removeAssetsInventoryItem.setVisibility(View.INVISIBLE);
+    public void showOrHideButtons() {
+        removeAssetsInventoryItem.setVisibility((numberOfFieldsInList > 1) ? View.VISIBLE : View.INVISIBLE);
+        addAssetsInventoryItem.setVisibility((numberOfFieldsInList < 10) ? View.VISIBLE : View.INVISIBLE);
         }
-    }
 
     public void addAssetsInventoryItem() {
         LinearLayout ll = (LinearLayout) findViewById(R.id.linearLayoutAssetsInventoryList);

@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,19 +36,23 @@ public class NetWorthCalculatorActivity extends AppCompatActivity {
         EditText etLoans = (EditText) findViewById(R.id.editTextLoans);
         EditText etMortgage = (EditText) findViewById(R.id.editTextMortgage);
 
-        int et401kValue = Integer.parseInt(et401k.getText().toString());
-        int etRothIRAValue = Integer.parseInt(etRothIRA.getText().toString());
-        int etHSAValue = Integer.parseInt(etHSA.getText().toString());
-        int etSavingsValue = Integer.parseInt(etSavings.getText().toString());
-        int etAssetsInventoryValue = Integer.parseInt(etAssetsInventory.getText().toString());
-        int etCreditCard1Value = Integer.parseInt(etCreditCard1.getText().toString());
-        int etCreditCard2Value = Integer.parseInt(etCreditCard2.getText().toString());
-        int etLoansValue = Integer.parseInt(etLoans.getText().toString());
-        int etMortgageValue = Integer.parseInt(etMortgage.getText().toString());
+        try {
+            int et401kValue = Integer.parseInt(et401k.getText().toString());
+            int etRothIRAValue = Integer.parseInt(etRothIRA.getText().toString());
+            int etHSAValue = Integer.parseInt(etHSA.getText().toString());
+            int etSavingsValue = Integer.parseInt(etSavings.getText().toString());
+            int etAssetsInventoryValue = Integer.parseInt(etAssetsInventory.getText().toString());
+            int etCreditCard1Value = Integer.parseInt(etCreditCard1.getText().toString());
+            int etCreditCard2Value = Integer.parseInt(etCreditCard2.getText().toString());
+            int etLoansValue = Integer.parseInt(etLoans.getText().toString());
+            int etMortgageValue = Integer.parseInt(etMortgage.getText().toString());
 
-        int netWorth = (et401kValue + etRothIRAValue + etHSAValue + etSavingsValue + etAssetsInventoryValue) - (etCreditCard1Value + etCreditCard2Value + etLoansValue + etMortgageValue);
-        String netWorthToString = String.valueOf(netWorth);
+            int netWorth = (et401kValue + etRothIRAValue + etHSAValue + etSavingsValue + etAssetsInventoryValue) - (etCreditCard1Value + etCreditCard2Value + etLoansValue + etMortgageValue);
+            String netWorthToString = String.valueOf(netWorth);
 
-        textViewCalculateNetWorth.setText(getResources().getString(R.string.net_worth_calculated) + netWorthToString);
+            textViewCalculateNetWorth.setText(getResources().getString(R.string.net_worth_calculated) + netWorthToString);
+        } catch (Exception e) {
+            Toast.makeText(this, "Please fill in all of the fields!", Toast.LENGTH_LONG).show();
+        }
     }
 }
