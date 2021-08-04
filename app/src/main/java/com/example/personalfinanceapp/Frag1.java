@@ -15,9 +15,9 @@ public class Frag1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.frag1_layout, container, false);
-        netWorth = view.findViewById(R.id.netWorthButton);
-        netWorthProgression = view.findViewById(R.id.netWorthProgressionButton);
-        assetsInventory = view.findViewById(R.id.assetsInventoryButton);
+        netWorth = view.findViewById(R.id.buttonNetWorth);
+        netWorthProgression = view.findViewById(R.id.buttonNetWorthProgression);
+        assetsInventory = view.findViewById(R.id.buttonAssetsInventory);
 
         netWorth.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,30 +7,30 @@
     android:background="@color/honeydew">
 
     <Button
-        android:id="@+id/netWorthButton"
+        android:id="@+id/buttonNetWorth"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginTop="152dp"
         android:layout_marginBottom="7dp"
         android:text="@string/net_worth_calculator"
-        app:layout_constraintBottom_toTopOf="@+id/netWorthProgressionButton"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNetWorthProgression"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/netWorthProgressionButton"
+        android:id="@+id/buttonNetWorthProgression"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:text="@string/net_worth_progression"
-        app:layout_constraintBottom_toTopOf="@+id/assetsInventoryButton"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAssetsInventory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/netWorthButton" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonNetWorth" />
 
     <Button
-        android:id="@+id/assetsInventoryButton"
+        android:id="@+id/buttonAssetsInventory"
         android:layout_width="200dp"
         android:layout_height="0dp"
         android:layout_marginBottom="323dp"
@@ -38,6 +38,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/netWorthProgressionButton" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonNetWorthProgression" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

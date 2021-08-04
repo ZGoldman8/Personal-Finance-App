@@ -18,8 +18,8 @@ public class AssetsInventoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frag1_assets_inventory_layout);
-        addAssetsInventoryItem = (FloatingActionButton) findViewById(R.id.addAssetsInventoryItemButton);
-        removeAssetsInventoryItem = (FloatingActionButton) findViewById(R.id.removeAssetsInventoryItemButton);
+        addAssetsInventoryItem = (FloatingActionButton) findViewById(R.id.buttonAddAssetsInventoryItem);
+        removeAssetsInventoryItem = (FloatingActionButton) findViewById(R.id.buttonRemoveAssetsInventoryItem);
         removeAssetsInventoryItem.setVisibility(View.INVISIBLE);
 
         addAssetsInventoryItem.setOnClickListener(new View.OnClickListener() {

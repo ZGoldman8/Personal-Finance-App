@@ -9,6 +9,8 @@
     <string name="net_worth_calculator">Net Worth Calculator</string>
     <string name="net_worth_progression">Net Worth Progression</string>
     <string name="assets_inventory">Assets Inventory</string>
+    <string name="investment_performance">Investment Performance</string>
+    <string name="rebalance_portfolio">Rebalance Portfolio</string>
 
     <!--Other Text-->
     <string name="asset_name">Asset Name</string>

@@ -44,8 +44,10 @@ public class NetWorthCalculatorActivity extends AppCompatActivity {
         int etCreditCard2Value = Integer.parseInt(etCreditCard2.getText().toString());
         int etLoansValue = Integer.parseInt(etLoans.getText().toString());
         int etMortgageValue = Integer.parseInt(etMortgage.getText().toString());
-        int netWorth = (et401kValue + etRothIRAValue + etHSAValue + etSavingsValue + etAssetsInventoryValue) - (etCreditCard1Value + etCreditCard2Value + etLoansValue + etMortgageValue);
 
-        textViewCalculateNetWorth.setText(R.string.net_worth_calculated + netWorth);
+        int netWorth = (et401kValue + etRothIRAValue + etHSAValue + etSavingsValue + etAssetsInventoryValue) - (etCreditCard1Value + etCreditCard2Value + etLoansValue + etMortgageValue);
+        String netWorthToString = String.valueOf(netWorth);
+
+        textViewCalculateNetWorth.setText(getResources().getString(R.string.net_worth_calculated) + netWorthToString);
     }
 }

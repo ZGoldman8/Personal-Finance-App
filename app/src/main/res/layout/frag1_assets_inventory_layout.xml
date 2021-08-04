@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/addAssetsInventoryItemButton"
+            android:id="@+id/buttonAddAssetsInventoryItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -56,11 +56,11 @@
             app:srcCompat="@android:drawable/ic_input_add" />
 
         <Button
-            android:id="@+id/saveAssetsInventoryButton"
+            android:id="@+id/buttonSaveAssetsInventory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/removeAssetsInventoryItemButton"
-            android:layout_alignRight="@+id/addAssetsInventoryItemButton"
+            android:layout_alignLeft="@+id/buttonRemoveAssetsInventoryItem"
+            android:layout_alignRight="@+id/buttonAddAssetsInventoryItem"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="75dp"
             android:layout_marginEnd="75dp"
@@ -68,7 +68,7 @@
             android:text="@string/save" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/removeAssetsInventoryItemButton"
+            android:id="@+id/buttonRemoveAssetsInventoryItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
