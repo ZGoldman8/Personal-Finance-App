@@ -18,4 +18,6 @@
     <string name="net_worth_savings">Savings</string>
     <string name="net_worth_401k">401k</string>
     <string name="save">Save</string>
+    <string name="calculate">Calculate</string>
+    <string name="net_worth_calculated">Your net worth is $</string>
 </resources>
