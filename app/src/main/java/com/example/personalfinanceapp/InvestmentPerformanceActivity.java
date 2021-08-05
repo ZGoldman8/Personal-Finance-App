@@ -2,6 +2,8 @@ package com.example.personalfinanceapp;
 
 import android.os.Bundle;
 import android.widget.Toast;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,12 +37,28 @@ public class InvestmentPerformanceActivity extends AppCompatActivity {
     }
 
     private void handleFailure(AlphaVantageException e) {
-        Toast.makeText(this, "Failed to retrieve stock data", Toast.LENGTH_LONG).show();
+        System.out.println("Failed to retrieve stock data");
     }
 
     private void handleSuccess(Object e) {
-        Toast.makeText(this, "Stock data retrieved successfully", Toast.LENGTH_LONG).show();
-        System.out.println(e);
+        System.out.println("Stock data retrieved successfully");
+
+        //What I'm going to do here is parse "adjusted close" and get the value after that
+
+        //Match open price
+        Pattern p1 = Pattern.compile("open=([\\d\\.]*)");
+        Matcher m1 = p1.matcher(e.toString());
+
+        //Match date
+        Pattern p2 = Pattern.compile("date=([\\d]{4}-[\\d]{2}-[\\d]{2})");
+        Matcher m2 = p2.matcher(e.toString());
+
+        if (!m1.find() || !m2.find()) {
+            System.out.println("Failed to retrieve stock data");
+        } else {
+            System.out.println("Open Price: " + m1.group(1));
+            System.out.println("Date: " + m2.group(1));
+        }
     }
 
 }
