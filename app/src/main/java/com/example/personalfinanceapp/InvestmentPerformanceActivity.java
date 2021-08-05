@@ -41,23 +41,19 @@ public class InvestmentPerformanceActivity extends AppCompatActivity {
     }
 
     private void handleSuccess(Object e) {
-        System.out.println("Stock data retrieved successfully");
-
-        //What I'm going to do here is parse "adjusted close" and get the value after that
-
-        //Match open price
-        Pattern p1 = Pattern.compile("open=([\\d\\.]*)");
+        Pattern p1 = Pattern.compile("open=([\\d\\.]*), high=([\\d\\.]*), low=([\\d\\.])*, close=([\\d\\.])*, adjustedClose=([\\d\\.])*, volume=([\\d]*), dividendAmount=([\\d\\.]*), splitCoefficient=([\\d\\.]*), " +
+                        "date=([\\d]{4}-[\\d]{2}-[\\d]{2})");
         Matcher m1 = p1.matcher(e.toString());
 
-        //Match date
-        Pattern p2 = Pattern.compile("date=([\\d]{4}-[\\d]{2}-[\\d]{2})");
-        Matcher m2 = p2.matcher(e.toString());
-
-        if (!m1.find() || !m2.find()) {
+        if (!m1.find()) {
             System.out.println("Failed to retrieve stock data");
         } else {
-            System.out.println("Open Price: " + m1.group(1));
-            System.out.println("Date: " + m2.group(1));
+            System.out.println("Open: " + m1.group(1));
+            System.out.println("High: " + m1.group(2));
+            System.out.println("Low: " + m1.group(3));
+            System.out.println("Close: " + m1.group(4));
+            System.out.println("Adjusted Close: " + m1.group(5));
+            System.out.println("Date: " + m1.group(9));
         }
     }
 
