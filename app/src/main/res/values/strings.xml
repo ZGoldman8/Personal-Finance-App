@@ -13,13 +13,23 @@
     <string name="rebalance_portfolio">Rebalance Portfolio</string>
 
     <!--Other Text-->
+    <string-array name="array_ticker_symbols">
+        <item>LGND</item>
+        <item>AAPL</item>
+    </string-array>
+
     <string name="asset_name">Asset Name</string>
     <string name="asset_price">Asset Price</string>
-    <string name="net_worth_roth_ira">Roth IRA</string>
-    <string name="net_worth_hsa">HSA</string>
-    <string name="net_worth_savings">Savings</string>
-    <string name="net_worth_401k">401k</string>
-    <string name="save">Save</string>
     <string name="calculate">Calculate</string>
+    <string name="close">Closing Price</string>
+    <string name="date">Date</string>
+    <string name="net_worth_401k">401k</string>
     <string name="net_worth_calculated">Your net worth is $</string>
+    <string name="net_worth_hsa">HSA</string>
+    <string name="net_worth_roth_ira">Roth IRA</string>
+    <string name="net_worth_savings">Savings</string>
+    <string name="retrieve_stock_data">Retrieve Stock Data</string>
+    <string name="open">Opening Price</string>
+    <string name="save">Save</string>
+    <string name="ticker">Ticker Symbol</string>
 </resources>

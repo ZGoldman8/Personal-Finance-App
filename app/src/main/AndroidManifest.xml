@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PersonalFinanceApp">
+
         <activity android:name=".NetWorthCalculatorActivity" android:label="@string/net_worth_calculator" android:parentActivityName=".MainActivity"/>
         <activity android:name=".NetWorthProgressionActivity" android:label="@string/net_worth_progression" android:parentActivityName=".MainActivity"/>
         <activity android:name=".AssetsInventoryActivity" android:label="@string/assets_inventory" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustPan"/>
@@ -25,6 +26,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
