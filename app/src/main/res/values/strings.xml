@@ -18,11 +18,18 @@
         <item>AAPL</item>
     </string-array>
 
+    <string name="asset_allocation">Asset Allocation</string>
     <string name="asset_name">Asset Name</string>
     <string name="asset_price">Asset Price</string>
     <string name="calculate">Calculate</string>
     <string name="close">Closing Price</string>
     <string name="date">Date</string>
+    <string name="domestic_bonds">Domestic Bonds</string>
+    <string name="domestic_stocks">Domestic Stocks</string>
+    <string name="favorite_stocks">Favorite Stocks</string>
+    <string name="international_bonds">International Bonds</string>
+    <string name="international_stocks">International Stocks</string>
+    <string name="investment_settings">Investment Settings</string>
     <string name="net_worth_401k">401k</string>
     <string name="net_worth_calculated">Your net worth is $</string>
     <string name="net_worth_hsa">HSA</string>

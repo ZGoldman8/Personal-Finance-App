@@ -1,6 +1,7 @@
 package com.example.personalfinanceapp;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -66,34 +67,27 @@ public class InvestmentPerformanceActivity extends AppCompatActivity {
     }
 
     private void handleFailure(AlphaVantageException e) {
-        System.out.println("Failed to retrieve stock data");
+        Looper.prepare();
+        Toast.makeText(this, "Failed to retrieve stock data", Toast.LENGTH_LONG).show();
     }
 
     private void handleSuccess(Object e) {
+        //TODO: Make selectedDate dynamic
+        String selectedDate = "2021-08-11";
         Pattern p1 = Pattern.compile("open=([\\d\\.]*), high=([\\d\\.]*), low=([\\d\\.]*), close=([\\d\\.]*), adjustedClose=([\\d\\.]*), volume=([\\d]*), dividendAmount=([\\d\\.]*), splitCoefficient=([\\d\\.]*), " +
-                        "date=([\\d]{4}-[\\d]{2}-[\\d]{2})");
+                "date=" + selectedDate);
         Matcher m1 = p1.matcher(e.toString());
         TextView textViewOpen = (TextView) findViewById(R.id.textViewOpeningPrice);
         TextView textViewClose = (TextView) findViewById(R.id.textViewClosingPrice);
         TextView textViewDate = (TextView) findViewById(R.id.textViewDate);
 
         if (!m1.find()) {
-            //TODO: Make this a Toast
-            System.out.println("Failed to retrieve stock data");
+            Looper.prepare();
+            Toast.makeText(this, "Failed to retrieve stock data", Toast.LENGTH_LONG).show();
         } else {
-            if (m1.group(9).equals("2021-08-11")) {
-                System.out.println("Open: " + m1.group(1));
-                System.out.println("High: " + m1.group(2));
-                System.out.println("Low: " + m1.group(3));
-                System.out.println("Close: " + m1.group(4));
-                System.out.println("Adjusted Close: " + m1.group(5));
-                System.out.println("Date: " + m1.group(9));
-
-                textViewOpen.setText(m1.group(1));
-                textViewClose.setText(m1.group(4));
-                textViewDate.setText(m1.group(9));
+            textViewOpen.setText(m1.group(1));
+            textViewClose.setText(m1.group(4));
+            textViewDate.setText(selectedDate);
             }
         }
     }
-
-}

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/honeydew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/honeydew">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewFavoriteStocksTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/favorite_stocks"
+                    android:textAlignment="center"
+                    android:textSize="35dp" />
+
+                //TODO: Dynamically add/remove favorites
+                <Spinner
+                    android:id="@+id/spinnerFavoriteStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/array_ticker_symbols" />
+
+                <TextView
+                    android:id="@+id/textViewAssetAllocationTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/asset_allocation"
+                    android:textAlignment="center"
+                    android:textSize="35dp" />
+
+                <TextView
+                    android:id="@+id/textViewDomesticStocksTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_stocks"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextDomesticStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewInternationalStocksTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_stocks"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextInternationalStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewDomesticBondsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_bonds"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextDomesticBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewInternationalBondsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_bonds"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editTextIntenrationalBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:id="@+id/buttonRetrieveStockData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/save" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
