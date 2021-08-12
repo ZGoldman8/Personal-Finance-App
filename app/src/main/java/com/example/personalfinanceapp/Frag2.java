@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Frag2 extends Fragment {
-    Button investmentPerformance, rebalancePortfolio;
+    Button investmentPerformance, rebalancePortfolio, investmentSettings;
 
     @Nullable
     @Override
@@ -19,6 +19,7 @@ public class Frag2 extends Fragment {
         View view = inflater.inflate(R.layout.frag2_layout, container, false);
         investmentPerformance = view.findViewById(R.id.buttonInvestmentPerformance);
         rebalancePortfolio = view.findViewById(R.id.buttonRebalancePortfolio);
+        investmentSettings = view.findViewById(R.id.buttonInvestmentSettings);
 
         investmentPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,13 @@ public class Frag2 extends Fragment {
             }
         });
 
+        investmentSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openInvestmentSettings();
+            }
+        });
+
         return view;
     }
 
@@ -44,6 +52,11 @@ public class Frag2 extends Fragment {
 
     public void openRebalancePortfolio() {
         Intent intent = new Intent(getActivity(), RebalancePortfolioActivity.class);
+        startActivity(intent);
+    }
+
+    public void openInvestmentSettings() {
+        Intent intent = new Intent(getActivity(), InvestmentSettingsActivity.class);
         startActivity(intent);
     }
 }

@@ -16,6 +16,7 @@
         <activity android:name=".AssetsInventoryActivity" android:label="@string/assets_inventory" android:parentActivityName=".MainActivity" android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".RebalancePortfolioActivity" android:label="@string/rebalance_portfolio" android:parentActivityName=".MainActivity"/>
         <activity android:name=".InvestmentPerformanceActivity" android:label="@string/investment_performance" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".InvestmentSettingsActivity" android:label="@string/investment_settings" android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

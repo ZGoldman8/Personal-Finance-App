@@ -39,6 +39,23 @@
                     android:layout_height="wrap_content"
                     android:entries="@array/array_ticker_symbols" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/buttonAddFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add" />
+                    <Button
+                        android:id="@+id/buttonRemoveFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/remove" />
+
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/textViewAssetAllocationTitle"
                     android:layout_width="match_parent"
@@ -109,7 +126,7 @@
                     android:textSize="20dp" />
 
                 <EditText
-                    android:id="@+id/editTextIntenrationalBonds"
+                    android:id="@+id/editTextInternationalBonds"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20px"

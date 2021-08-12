@@ -1,7 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/honeydew">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="206dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewCurrentBalanceTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/current_balance"
+                    android:textAlignment="center"
+                    android:textSize="35dp" />
+                <TextView
+                    android:id="@+id/textViewCurrentBalanceDomesticStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_stocks"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextCurrentBalanceDomesticStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewCurrentBalanceInternationalStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_stocks"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextCurrentBalanceInternationalStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewCurrentBalanceDomesticBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_bonds"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextCurrentBalanceDomesticBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewCurrentBalanceInternationalBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_bonds"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextCurrentBalanceInternationalBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="206dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTargetBalanceTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/target_balance"
+                    android:textAlignment="center"
+                    android:textSize="35dp" />
+                <TextView
+                    android:id="@+id/textViewTargetBalanceDomesticStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_stocks"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextTargetBalanceDomesticStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewTargetBalanceInternationalStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_stocks"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextTargetBalanceInternationalStocks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewTargetBalanceDomesticBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/domestic_bonds"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextTargetBalanceDomesticBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewTargetBalanceInternationalBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/biryani_extralight"
+                    android:text="@string/international_bonds"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/editTextTargetBalanceInternationalBonds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20px"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="parent">
+            <Button
+                android:id="@+id/buttonRebalancePortfolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/rebalance" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
