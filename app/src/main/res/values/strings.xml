@@ -1,6 +1,47 @@
 <resources>
+    <!--Headers-->
     <string name="app_name">Personal Finance App</string>
     <string name="tab_text_1">Net Worth</string>
     <string name="tab_text_2">Investments</string>
     <string name="tab_text_3">Budget</string>
+
+    <!--Titles-->
+    <string name="net_worth_calculator">Net Worth Calculator</string>
+    <string name="net_worth_progression">Net Worth Progression</string>
+    <string name="assets_inventory">Assets Inventory</string>
+    <string name="investment_performance">Investment Performance</string>
+    <string name="rebalance_portfolio">Rebalance Portfolio</string>
+
+    <!--Other Text-->
+    <string-array name="array_ticker_symbols">
+        <item>LGND</item>
+        <item>AAPL</item>
+    </string-array>
+
+    <string name="add">Add</string>
+    <string name="asset_allocation">Asset Allocation</string>
+    <string name="asset_name">Asset Name</string>
+    <string name="asset_price">Asset Price</string>
+    <string name="calculate">Calculate</string>
+    <string name="close">Closing Price</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="date">Date</string>
+    <string name="domestic_bonds">Domestic Bonds</string>
+    <string name="domestic_stocks">Domestic Stocks</string>
+    <string name="favorite_stocks">Favorite Stocks</string>
+    <string name="international_bonds">International Bonds</string>
+    <string name="international_stocks">International Stocks</string>
+    <string name="investment_settings">Investment Settings</string>
+    <string name="net_worth_401k">401k</string>
+    <string name="net_worth_calculated">Your net worth is $</string>
+    <string name="net_worth_hsa">HSA</string>
+    <string name="net_worth_roth_ira">Roth IRA</string>
+    <string name="net_worth_savings">Savings</string>
+    <string name="rebalance">Rebalance</string>
+    <string name="remove">Remove</string>
+    <string name="retrieve_stock_data">Retrieve Stock Data</string>
+    <string name="open">Opening Price</string>
+    <string name="save">Save</string>
+    <string name="target_balance">Target Balance</string>
+    <string name="ticker">Ticker Symbol</string>
 </resources>

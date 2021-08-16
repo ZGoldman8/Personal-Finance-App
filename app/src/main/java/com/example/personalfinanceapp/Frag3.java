@@ -13,6 +13,6 @@ public class Frag3 extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-       return inflater.inflate(R.layout.frag3_layout, container, false);
+        return inflater.inflate(R.layout.frag3_layout, container, false);
     }
 }
