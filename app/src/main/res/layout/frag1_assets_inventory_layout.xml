@@ -24,16 +24,16 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextItem1"
+                android:id="@+id/editTextItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/asset_name" />
 
             <EditText
-                android:id="@+id/editTextItemPrice1"
+                android:id="@+id/editTextItemValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/asset_price" />
+                android:hint="@string/asset_value" />
         </LinearLayout>
     </ScrollView>
 
