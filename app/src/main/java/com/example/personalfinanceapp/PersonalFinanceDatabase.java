@@ -11,12 +11,19 @@ import androidx.annotation.Nullable;
 
 public class PersonalFinanceDatabase extends SQLiteOpenHelper {
 
+    public static final String ASSET_ALLOCATION_TABLE = "ASSET_ALLOCATION_TABLE";
     public static final String ASSETS_INVENTORY_TABLE = "ASSETS_INVENTORY_TABLE";
     public static final String ASSETS_TABLE = "ASSETS_TABLE";
+    public static final String FAVORITES_TABLE = "FAVORITES_TABLE";
     public static final String NET_WORTH_TABLE = "NET_WORTH_TABLE";
     public static final String PORTFOLIO_TABLE = "PORTFOLIO_TABLE";
 
     public static final String COLUMN_ID = "ID";
+
+    public static final String COLUMN_ASSET_ALLOCATION_DOMESTIC_STOCKS = "ASSET_ALLOCATION_DOMESTIC_STOCKS";
+    public static final String COLUMN_ASSET_ALLOCATION_DOMESTIC_BONDS = "ASSET_ALLOCATION_DOMESTIC_BONDS";
+    public static final String COLUMN_ASSET_ALLOCATION_INTERNATIONAL_STOCKS = "ASSET_ALLOCATION_INTERNATIONAL_STOCKS";
+    public static final String COLUMN_ASSET_ALLOCATION_INTERNATIONAL_BONDS = "ASSET_ALLOCATION_INTERNATIONAL_BONDS";
 
     public static final String COLUMN_ASSETS_401k = "ASSETS_401k";
     public static final String COLUMN_ASSETS_HSA = "ASSETS_HSA";
@@ -29,6 +36,8 @@ public class PersonalFinanceDatabase extends SQLiteOpenHelper {
     public static final String COLUMN_ASSETS_CREDIT_CARD_TWO = "ASSETS_CREDIT_CARD_TWO";
     public static final String COLUMN_ASSETS_LOANS = "ASSETS_LOANS";
     public static final String COLUMN_ASSETS_MORTGAGE = "ASSETS_MORTGAGE";
+
+    public static final String COLUMN_FAVORITES_STOCK_SYMBOL = "FAVORITES_STOCK_SYMBOL";
 
     public static final String COLUMN_NET_WORTH_TOTAL = "NET_WORTH_TOTAL";
     public static final String COLUMN_NET_WORTH_YEAR = "NET_WORTH_YEAR";
@@ -48,6 +57,14 @@ public class PersonalFinanceDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        String createAssetAllocationTableStatement = "CREATE TABLE " + ASSET_ALLOCATION_TABLE + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_ASSET_ALLOCATION_DOMESTIC_STOCKS + " INT, " +
+                COLUMN_ASSET_ALLOCATION_DOMESTIC_BONDS + " INT, " +
+                COLUMN_ASSET_ALLOCATION_INTERNATIONAL_STOCKS + " INT, " +
+                COLUMN_ASSET_ALLOCATION_INTERNATIONAL_BONDS + " INT" +
+                ")";
+
         String createAssetsTableStatement = "CREATE TABLE " + ASSETS_TABLE + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_ASSETS_401k + " INT, " +
@@ -67,11 +84,16 @@ public class PersonalFinanceDatabase extends SQLiteOpenHelper {
                 COLUMN_ASSETS_INVENTORY_VALUE + " INT" +
                 ")";
 
+        String createFavoritesTableStatement = "CREATE TABLE " + FAVORITES_TABLE + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_FAVORITES_STOCK_SYMBOL + " STRING" +
+                ")";
+
         String createNetWorthTableStatement = "CREATE TABLE " + NET_WORTH_TABLE + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 COLUMN_NET_WORTH_YEAR + " INT, " +
                 COLUMN_NET_WORTH_TOTAL + " INT" +
-                ")";
+            ")";
 
         String createPortfolioTableStatement = "CREATE TABLE " + PORTFOLIO_TABLE + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -85,8 +107,10 @@ public class PersonalFinanceDatabase extends SQLiteOpenHelper {
                 COLUMN_PORTFOLIO_INTERNATIONAL_STOCKS_TARGET + " INT" +
                 ")";
 
+        db.execSQL(createAssetAllocationTableStatement);
         db.execSQL(createAssetsTableStatement);
         db.execSQL(createAssetsInventoryTableStatement);
+        db.execSQL(createFavoritesTableStatement);
         db.execSQL(createNetWorthTableStatement);
         db.execSQL(createPortfolioTableStatement);
     }
