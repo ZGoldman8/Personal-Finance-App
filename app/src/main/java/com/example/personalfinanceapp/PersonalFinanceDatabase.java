@@ -11,33 +11,90 @@ import androidx.annotation.Nullable;
 
 public class PersonalFinanceDatabase extends SQLiteOpenHelper {
 
-    public static final String FINANCE_TABLE = "FINANCE_TABLE";
+    public static final String ASSETS_INVENTORY_TABLE = "ASSETS_INVENTORY_TABLE";
+    public static final String ASSETS_TABLE = "ASSETS_TABLE";
+    public static final String NET_WORTH_TABLE = "NET_WORTH_TABLE";
+    public static final String PORTFOLIO_TABLE = "PORTFOLIO_TABLE";
+
     public static final String COLUMN_ID = "ID";
+
     public static final String COLUMN_ASSETS_401k = "ASSETS_401k";
-    public static final String COLUMN_ASSETS_ROTH_IRA = "ASSETS_ROTH_IRA";
     public static final String COLUMN_ASSETS_HSA = "ASSETS_HSA";
-    public static final String COLUMN_ASSETS_SAVINGS = "ASSETS_SAVINGS";
+    public static final String COLUMN_ASSETS_INVENTORY_NAME = "ASSETS_INVENTORY_NAME";
     public static final String COLUMN_ASSETS_INVENTORY_TOTAL = "ASSETS_INVENTORY_TOTAL";
+    public static final String COLUMN_ASSETS_INVENTORY_VALUE = "ASSETS_INVENTORY_VALUE";
+    public static final String COLUMN_ASSETS_ROTH_IRA = "ASSETS_ROTH_IRA";
+    public static final String COLUMN_ASSETS_SAVINGS = "ASSETS_SAVINGS";
+    public static final String COLUMN_ASSETS_CREDIT_CARD_ONE = "ASSETS_CREDIT_CARD_ONE";
+    public static final String COLUMN_ASSETS_CREDIT_CARD_TWO = "ASSETS_CREDIT_CARD_TWO";
+    public static final String COLUMN_ASSETS_LOANS = "ASSETS_LOANS";
+    public static final String COLUMN_ASSETS_MORTGAGE = "ASSETS_MORTGAGE";
+
+    public static final String COLUMN_NET_WORTH_TOTAL = "NET_WORTH_TOTAL";
+    public static final String COLUMN_NET_WORTH_YEAR = "NET_WORTH_YEAR";
+
+    public static final String COLUMN_PORTFOLIO_DOMESTIC_BONDS_CURRENT = "PORTFOLIO_DOMESTIC_BONDS_CURRENT";
+    public static final String COLUMN_PORTFOLIO_DOMESTIC_BONDS_TARGET = "PORTFOLIO_DOMESTIC_BONDS_TARGET";
+    public static final String COLUMN_PORTFOLIO_DOMESTIC_STOCKS_CURRENT = "PORTFOLIO_DOMESTIC_STOCKS_CURRENT";
+    public static final String COLUMN_PORTFOLIO_DOMESTIC_STOCKS_TARGET = "PORTFOLIO_DOMESTIC_STOCKS_TARGET";
+    public static final String COLUMN_PORTFOLIO_INTERNATIONAL_BONDS_CURRENT = "PORTFOLIO_INTERNATIONAL_BONDS_CURRENT";
+    public static final String COLUMN_PORTFOLIO_INTERNATIONAL_BONDS_TARGET = "PORTFOLIO_INTERNATIONAL_BONDS_TARGET";
+    public static final String COLUMN_PORTFOLIO_INTERNATIONAL_STOCKS_CURRENT = "PORTFOLIO_INTERNATIONAL_STOCKS_CURRENT";
+    public static final String COLUMN_PORTFOLIO_INTERNATIONAL_STOCKS_TARGET = "PORTFOLIO_INTERNATIONAL_STOCKS_TARGET";
 
     public PersonalFinanceDatabase(@Nullable Context context) {
-        super(context, "finance.db", null, 1);
+        super(context, "finance_database.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTableStatement = "CREATE TABLE " + FINANCE_TABLE + " (" +
+        String createAssetsTableStatement = "CREATE TABLE " + ASSETS_TABLE + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_ASSETS_401k + " INT, " + COLUMN_ASSETS_ROTH_IRA + " INT, " +
-                COLUMN_ASSETS_HSA + " INT, " + COLUMN_ASSETS_SAVINGS + " INT, " +
-                COLUMN_ASSETS_INVENTORY_TOTAL + " INT" + ")";
+                COLUMN_ASSETS_401k + " INT, " +
+                COLUMN_ASSETS_ROTH_IRA + " INT, " +
+                COLUMN_ASSETS_HSA + " INT, " +
+                COLUMN_ASSETS_SAVINGS + " INT, " +
+                COLUMN_ASSETS_INVENTORY_TOTAL + " INT," +
+                COLUMN_ASSETS_CREDIT_CARD_ONE + " INT, " +
+                COLUMN_ASSETS_CREDIT_CARD_TWO + " INT, " +
+                COLUMN_ASSETS_LOANS + " INT, " +
+                COLUMN_ASSETS_MORTGAGE + "INT" +
+                ")";
 
-        db.execSQL(createTableStatement);
+        String createAssetsInventoryTableStatement = "CREATE TABLE " + ASSETS_INVENTORY_TABLE + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_ASSETS_INVENTORY_NAME + " STRING, " +
+                COLUMN_ASSETS_INVENTORY_VALUE + " INT" +
+                ")";
+
+        String createNetWorthTableStatement = "CREATE TABLE " + NET_WORTH_TABLE + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_NET_WORTH_YEAR + " INT, " +
+                COLUMN_NET_WORTH_TOTAL + " INT" +
+                ")";
+
+        String createPortfolioTableStatement = "CREATE TABLE " + PORTFOLIO_TABLE + " (" +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_PORTFOLIO_DOMESTIC_BONDS_CURRENT + " INT, " +
+                COLUMN_PORTFOLIO_DOMESTIC_BONDS_TARGET + " INT, " +
+                COLUMN_PORTFOLIO_DOMESTIC_STOCKS_CURRENT + " INT, " +
+                COLUMN_PORTFOLIO_DOMESTIC_STOCKS_TARGET + " INT, " +
+                COLUMN_PORTFOLIO_INTERNATIONAL_BONDS_CURRENT + " INT," +
+                COLUMN_PORTFOLIO_INTERNATIONAL_BONDS_TARGET + " INT, " +
+                COLUMN_PORTFOLIO_INTERNATIONAL_STOCKS_CURRENT + " INT, " +
+                COLUMN_PORTFOLIO_INTERNATIONAL_STOCKS_TARGET + " INT" +
+                ")";
+
+        db.execSQL(createAssetsTableStatement);
+        db.execSQL(createAssetsInventoryTableStatement);
+        db.execSQL(createNetWorthTableStatement);
+        db.execSQL(createPortfolioTableStatement);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        db.execSQL("DROP TABLE IF EXISTS " + FINANCE_TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + ASSETS_TABLE);
         onCreate(db);
-
     }
+}

@@ -52,7 +52,7 @@ public class AssetsInventoryActivity extends AppCompatActivity {
         et1.setLayoutParams(p);
         et2.setLayoutParams(p);
         et1.setHint(R.string.asset_name);
-        et2.setHint(R.string.asset_price);
+        et2.setHint(R.string.asset_value);
         et1.setId(numberOfFieldsInList + 1);
         et2.setId(numberOfFieldsInList + 2);
         ll.addView(et1);
