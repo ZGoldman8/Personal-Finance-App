@@ -28,7 +28,7 @@
     <string name="date">Date</string>
     <string name="domestic_bonds">Domestic Bonds</string>
     <string name="domestic_stocks">Domestic Stocks</string>
-    <string name="favorite_stocks">Favorite Stocks</string>
+    <string name="favorite_stock_symbols">Favorite Stock Symbols</string>
     <string name="international_bonds">International Bonds</string>
     <string name="international_stocks">International Stocks</string>
     <string name="investment_settings">Investment Settings</string>

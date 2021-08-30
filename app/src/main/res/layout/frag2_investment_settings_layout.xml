@@ -28,7 +28,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:fontFamily="@font/biryani_extralight"
-                    android:text="@string/favorite_stocks"
+                    android:text="@string/favorite_stock_symbols"
                     android:textAlignment="center"
                     android:textSize="35dp" />
 
